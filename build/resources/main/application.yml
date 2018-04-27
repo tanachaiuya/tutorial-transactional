@@ -1,0 +1,21 @@
+server:
+  port: 9999
+
+spring:
+  h2:
+    console:
+      enabled: true
+      #http://localhost:9999/h2-console/login.jsp
+
+  datasource:
+    driverClassName: org.h2.Driver
+    url: jdbc:h2:~/atm_h2;DB_CLOSE_ON_EXIT=FALSE;AUTO_SERVER=TRUE;
+    username: "sa"
+    password: ""
+    initialize: true
+    sqlScriptEncoding: UTF-8
+  jpa:
+    database-platform: H2
+    hibernate:
+      ddl-auto: create
+    show_sql: true
